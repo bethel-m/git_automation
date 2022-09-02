@@ -41,7 +41,7 @@ add_to_gitignore(){
         echo "$1 duplicate found skippping file...."
     else 
         echo $1 >> .gitignore
-    fi
+    fi 
     
 }
 
