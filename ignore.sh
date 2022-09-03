@@ -45,6 +45,8 @@ add_to_gitignore(){
     
 }
 
+#just for this branch
+
 
 #this array holds the names of the values or files 
 # that were not added to the .gitignore file
