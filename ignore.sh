@@ -78,8 +78,9 @@ check_or_create_gitignore
 
 
 # adding files to the .gitignore file
-echo "============================ "
+echo "============================== "
 echo "adding your files to .gitignore ..."
+echo "------------------------------"
 for i in $*;do
     add_to_gitignore $i
 done 
@@ -87,6 +88,7 @@ done
 # confirming that all the passed arguments were added to the .gitignore file
 echo "=============================="
 echo "confirming arguments were successfully added to .gitignore ....."
+echo "------------------------------" 
 for i in $*; do 
     check_if_files_were_added $i
 done 
@@ -97,7 +99,9 @@ done
 # if they are not equal it prints the values in the files_not_added array
 if [[ $counter -eq $# ]]
 then
+    echo "-------------------------------------------------"
     echo "all $counter files confirmed present in .gitnore"
+    echo '-------------------------------------------------'
 else 
     echo "---------------------------------------------------"
     echo "an error occured: the following files were not added: "
@@ -106,4 +110,5 @@ else
     do
         echo $file
     done 
+    echo "---------------------------------------------------"
 fi
